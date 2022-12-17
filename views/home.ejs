@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This is a simple calculator</title>
+</head>
+<body>
+    <h2>This program helps to calculate Simple interest by taking 3 inputs as (1)Principal Values (2)Interst rate (3)Time</h2>
+    <form action="/" method="post">
+        <!-- Principal Value -->
+        <h2>Simple Interest Or Compound Interest Calculator</h2>
+
+        <p>Select Interest Type :
+
+            <select name="interestType">
+                <option value="simpleInterest">Simple Interest</option>
+                <option value="compoundInterest">Compound Interest</option>
+            </select>
+        </p>
+        <br>
+        <div>
+            <label for="principal">Enter Principal Value</label>
+            <input type="number" name="principal" id="">
+        </div>
+        <br>
+        <!-- Interest Rate Value -->
+        <div>
+            <label for="interestRate">Enter Interest Rate</label>
+            <input type="number" name="interestRate" id="">
+        </div>
+
+        <br>
+        <!-- Time -->
+        <div>
+            <label for="time">Enter Time</label>
+            <input type="number" name="time" id="">
+        </div>
+      <br>
+        <button type="submit">Calculate</button>
+    </form>
+</body>
+</html>
