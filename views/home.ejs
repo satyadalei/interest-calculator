@@ -5,39 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>This is a simple calculator</title>
+    <link rel="stylesheet" href="css/home.css">
 </head>
 <body>
-    <h3>This program helps to calculate Simple interest by taking 3 inputs as (1)Principal Values (2)Interst rate (3)Time</h3>
-    <form action="/" method="post">
-        <!-- Principal Value -->
-
-        <p>Select Interest Type :
-
-            <select name="interestType">
-                <option value="simpleInterest">Simple Interest</option>
-                <option value="compoundInterest">Compound Interest</option>
-            </select>
-        </p>
-        <br>
-        <div>
-            <label for="principal">Enter Principal Value</label>
-            <input type="number" name="principal" id="">
+    <div class="hero-section">
+        <div class="hero-container">
+            <h3>This program helps in calculating Simple interest or Compound Interest by taking 3 inputs as (1)Principal Values (2)Interst rate (3)Time</h3>
+            <span class="under-liner" ></span>
+            <form action="/" method="post">
+                <!-- Principal Value -->
+        
+                <p>Select Interest Type :
+        
+                    <select name="interestType">
+                        <option value="simpleInterest">Simple Interest</option>
+                        <option value="compoundInterest">Compound Interest</option>
+                    </select>
+                </p>
+                <br>
+                <div>
+                    <label for="principal">Enter Principal Value</label>
+                    <input type="number" name="principal" required >
+                </div>
+                <br>
+                <!-- Interest Rate Value -->
+                <div>
+                    <label for="interestRate">Enter Interest Rate</label>
+                    <input type="number" name="interestRate" required >
+                </div>
+        
+                <br>
+                <!-- Time -->
+                <div>
+                    <label for="time">Enter Time in year</label>
+                    <input type="number" name="time" required >
+                </div>
+              <br>
+                <button type="submit">Calculate</button>
+            </form>
         </div>
-        <br>
-        <!-- Interest Rate Value -->
-        <div>
-            <label for="interestRate">Enter Interest Rate</label>
-            <input type="number" name="interestRate" id="">
-        </div>
-
-        <br>
-        <!-- Time -->
-        <div>
-            <label for="time">Enter Time</label>
-            <input type="number" name="time" id="">
-        </div>
-      <br>
-        <button type="submit">Calculate</button>
-    </form>
+    </div>
+    <%- include("footer") %> 
 </body>
 </html>

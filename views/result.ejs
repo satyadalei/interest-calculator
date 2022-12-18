@@ -1,21 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Interet result</title>
-</head>
-<body>
-    <h2>Interest Type  : <%= interestType  %> </h2>
-    <p> Principal Value  :<%= principal  %> </p>
-    <p> Interest Rate : <%= interestRate  %> </p>
-    <p> Time in Year : <%= time  %> </p>
-
-    <h3><%= interestType  %>  is : <%= result %> </h3>
-
-    <div>
-        <a href="/">Calculate Again</a>
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/result.css" />
+  </head>
+  <body>
+    <div class="hero-section">
+      <div class="hero-container">
+        <!-- user input data -->
+        <div class="previous-data">
+            <h2>Interest Type : <span class="bg-white-transparent" ><%= interestType %></span> </h2>
+            <!-- Rupees Symbol Code : Unicode:U+020B9, HEX Code:&#x20B9, HTML Code: &#8377 -->
+            <p>Principal Value : <span class="bg-white-transparent" >&#x20B9 <%= principal %></span> </p>
+            <p>Interest Rate : <span class="bg-white-transparent"> <%= interestRate %>% </span></p>
+            <p>Time : <span class="bg-white-transparent"> <%= time %> Year </span> </p>
+        </div>
+        
+        <!-- Interest Result  -->
+        <div class="result-box" >
+            <h3><%= interestType %> is : 
+                <br>
+             <span class="show-big" >
+                &#x20B9 <%= result %>
+             </span>
+            </h3>
+        </div> 
+        
+        <div class="calc-again" >
+          <a href="/">Calculate Again</a>
+        </div>
+      </div>
     </div>
-</body>
+    <%- include("footer") %> 
+  </body>
 </html>

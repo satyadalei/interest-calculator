@@ -52,6 +52,6 @@ if (port === null || port === "" ){
 
 
 
-app.listen(port , function(){
+app.listen(port || 3000 , function(){
     console.log("Hello server started on 3000 ports");
 });
