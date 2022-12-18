@@ -24,7 +24,7 @@ app.post("/", function(req,res){
       principal : principalAmount,
       interestRate : interestRate,
       time : timeInYear ,
-      result : simpleInterest
+      result : simpleInterest.toFixed(2)
      });
    }else {
     let compoundInterest = principalAmount*(Math.pow((1+(interestRate/100)), timeInYear)) - principalAmount ;
@@ -33,7 +33,7 @@ app.post("/", function(req,res){
       principal : principalAmount,
       interestRate : interestRate,
       time : timeInYear ,
-      result : compoundInterest
+      result : compoundInterest.toFixed(2)
      });
    }
 
